@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Use Lato font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="form">
+        <div class="checkbox"></div>
+        <div class="signup-signin">
+            <div class="signup active">
+                <form action="" class="form-signup" name="form-signup">
+                    <h2>Inscription</h2>
+                    <div class="info">
+                        <section class="basic-infos">
+                            <h3 class="title">
+                                <span>1</span>
+                                Vos informations basiques
+                            </h3>
+
+                            <div class="field field-name">
+                                <label for="name">Nom : </label>
+                                <input type="text" name="name" id="name">
+                                <div class="error"></div>
+                            </div>
+
+                            <div class="field field-email">
+                                <label for="email">Email : </label>
+                                <input type="text" name="email" id="email">
+                                <div class="error"></div>
+                            </div>
+
+                            <div class="field field-password">
+                                <label for="password">Mot de passe : </label>
+                                <input type="password" name="password" id="password">
+                                <div class="error"></div>
+                            </div>
+
+                            <fieldset>
+                                <legend>Votre âge : </legend>
+                                <ul>
+                                    <li>
+                                        <label for="moins">
+                                            <input type="radio" name="age" id="moins" value="moins">
+                                            <span>Moins de 13</span>
+                                        </label>
+                                    </li>
+
+                                    <li>
+                                        <label for="plus">
+                                            <input type="radio" name="age" id="plus" value="plus">
+                                            <span>Plus de 13</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                                <div class="error"></div>
+                            </fieldset>
+
+                        </section>
+
+                        <section class="profile">
+                            <h3 class="title">
+                                <span>2</span>
+                                Votre profile
+                            </h3>
+
+                            <div class="field field-bio">
+                                <label for="bio">Bio : </label>
+                                <textarea name="bio" id="bio"></textarea>
+                                <div class="error"></div>
+                            </div>
+
+                            <div class="field field-job">
+                                <label for="job">Votre job : </label>
+                                <div class="select-wrapper">
+                                    <select name="job" id="job">
+                                        <option value="">-- Choisir --</option>
+                                        <option value="frontend">Frontend Developer</option>
+                                        <option value="backend">Backend Developer</option>
+                                        <option value="full">FullStack Developer</option>
+                                        <option value="others">Autres</option>
+                                    </select>
+                                </div>
+                                <div class="error"></div>
+                            </div>
+
+                            <fieldset>
+                                <legend>Contres d'intérêts : </legend>
+                                <ul>
+                                    <li>
+                                        <label for="coding">
+                                            <input type="checkbox" name="hobby" id="coding" value="coding">
+                                            <span>Coding</span>
+                                        </label>
+                                    </li>
+
+                                    <li>
+                                        <label for="basket">
+                                            <input type="checkbox" name="hobby" id="basket" value="basket">
+                                            <span>Basketball</span>
+                                        </label>
+                                    </li>
+
+                                    <li>
+                                        <label for="reading">
+                                            <input type="checkbox" name="hobby" id="reading" value="reading">
+                                            <span>Reading</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                                <div class="error"></div>
+                            </fieldset>
+
+                        </section>
+                    </div>
+                    <div class="submit-button">
+                        <button type="submit">S'inscrire</button>
+                    </div>
+                </form>
+            </div>
+            <!--Signin-->
+            <div class="signin">
+                <div class="illustration">
+                    <img src="./images/OTP security.png" alt="">
+                </div>
+                <form action="" class="form-signin" name="form-signin">
+                    <div class="signin-description">
+                        <h2>Connexion</h2>
+                        <p>
+                            Veuillez vous connecter à notre site poue bénéficier de nos fonctionnalités réservés
+                        </p>
+                    </div>
+
+                    <div class="field field-email">
+                        <label for="signin-email">Email</label>
+                        <input type="text" id="signin-email" name="email" />
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="field field-password">
+                        <label for="signin-password">Password</label>
+                        <input type="password" id="signin-password" name="password" />
+                        <div class="error"></div>
+                    </div>
+
+                    <div class="reinit-password">
+                        <a href="">Mot de passe oublié ?</a>
+                    </div>
+
+                    <div class="footer">
+                        <div>
+                            <div class="field field-remember">
+                                <label for="signin-remember">
+                                    <input type="checkbox" id="signin-remember" name="remember" />
+                                    <span>Se souvenir de moi</span>
+                                </label>
+                            </div>
+                            <div class="login-button">
+                                <button type="submit">
+                                    Se connecter
+                                </button>
+                            </div>
+                        </div>
+                        <p>
+                            Vous n'avez pas un compte? 
+                            <a href="">S'inscrire</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    <script src="./index.js"></script>
+</body>
+
+</html>

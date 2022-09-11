@@ -1,0 +1,410 @@
+/*Global Style*/
+
+html,body{
+    overflow-x: hidden;
+}
+
+input,select,button,textarea,label{
+    margin:0;
+    width:100%;
+    font-family: inherit;
+    font-size:100%;
+    box-sizing: border-box;
+    outline:0;
+}
+
+
+textarea{
+    resize:none;
+}
+
+fieldset{
+    border: none;
+}
+
+input[type='text'],input[type='password']{
+    padding:8px 5px;
+    margin:10px 0;
+    border-radius: 5px;
+    outline:0;
+    border:none;
+    background-color: rgba(9, 231, 9, 0.096);
+}
+
+fieldset,legend {
+    margin:0;
+    padding:0;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    margin:0;
+    padding:0;
+}
+
+ul,li{
+    list-style-type: none;
+}
+
+
+
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    margin:0;
+    padding:0;
+    font-family:Lato;
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+
+.error{
+    color:rgb(243, 50, 50);
+    font-size: 14px;
+    margin-top:-4px;
+}
+
+.form h2{
+    text-align:center;
+}
+
+.form .checkbox{
+    margin:20px auto;
+    width:80px;
+    height:40px;
+    border-radius:25px;
+    border:2px solid black;
+    cursor: pointer;
+    position:relative;
+    transition:0.3s;
+}
+
+.form .checkbox::before{
+    position:absolute;
+    content: '';
+    display: block;
+    left:5px;
+    top:3px;
+    bottom:3px;
+    height:auto;
+    width:35px;
+    border-radius:25px;
+    background:black;
+    transition:2s;
+}
+
+.form .checkbox.active::before{
+    left:auto;
+    right:5px;
+}
+
+.form .signup-signin{
+    padding:0 12px;
+}
+
+/*Sign up*/
+
+.form{
+    margin-bottom:50px;
+}
+
+.form .signup{
+    display:none;
+}
+
+.form .signup.active{
+    display:block;
+}
+
+@media only screen and (min-width:768px){
+    .form .signup .info{
+        display: flex;
+        width:700px;
+        gap:45px;
+    }
+    
+    .form .signup .info > section{
+        width:50%;
+    }
+}
+
+
+
+
+.form .signup form section h3.title span{
+    width:35px;
+    height:35px;
+    display: inline-flex;
+    justify-content:center;
+    align-items:center;
+    font-size:1.1rem;
+    background-color: rgb(8, 188, 8);
+    color:#fff;
+    border-radius: 50%;
+    margin-right:8px
+}
+
+.form .signup form section h3.title span{
+    margin: 10px 0;
+}
+
+.form .signup section .field{
+    margin-bottom:15px;
+}
+
+.form .signup input[type='radio'],
+.form .signup .profile input[type='checkbox'],
+.form .signin .form-signin input[type='checkbox']{
+    appearance: none;
+    display: inline-block;
+    width:16px;
+    height:16px;
+    border-radius:50%;
+    vertical-align: -3px;
+    border:1px solid rgba(0, 0, 0, 0.658);
+    position:relative;
+}
+
+.form .signup .profile input[type='checkbox'],
+.form .signin .form-signin input[type='checkbox']{
+    border-radius:0;
+    color:rgb(8, 188, 8);
+}
+
+.form .signup .profile input[type='checkbox']::before,
+.form .signin .form-signin input[type='checkbox']::before{
+    content:"✔";
+    background-color:transparent;
+    position:absolute;
+    top:-5px;
+    border-radius: 3px;
+    opacity:0;
+    transform: scale(1);
+    transition:.2s;
+}
+
+.form .signup .profile input[type='checkbox']:checked::before,
+.form .signin .form-signin input[type='checkbox']:checked::before{
+    opacity:1
+}
+
+.form .signup input[type='radio']::before{
+    content: '';
+    display:block;
+    position:absolute;
+    top:2px;
+    left:2px;
+    right:2px;
+    bottom:2px;
+    background-color: red;
+    border-radius:50%;
+    transform:scale(0);
+    background-color:rgb(8, 188, 8)
+}
+
+.form .signup input[type='radio']:checked::before,
+.form .signup .profile input[type='checkbox']:checked::before,
+.form .signin .form-signin input[type='checkbox']:checked::before{
+    transform: scale(1);
+}
+
+.form .signup fieldset ul label{
+    padding:10px 0;
+    display: block;
+}
+
+.form .signup fieldset ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form .signup fieldset ul li{
+    flex:1
+}
+
+.form .signup fieldset legend{
+    margin-bottom:10px;
+}
+
+/*
+    Profile
+*/
+
+.form .signup .profile .field textarea,
+.form .signup .profile .field-job .select-wrapper{
+    margin:10px 0;
+    border-radius:8px;
+    border:none;
+    background-color: rgba(9, 231, 9, 0.096);
+}
+
+.form .signup .profile .field-job{
+    margin-bottom: 23px;
+}
+
+
+.form .signup .profile .field textarea{
+    height: 150px;
+    padding:8px 5px;
+}
+
+.form .signup .profile .field select{
+    appearance: none;
+    border:none;
+    background-color: transparent;
+    padding:10px 5px;
+    outline: 0;
+}
+
+.form .signup .profile .field-job .select-wrapper{
+    position:relative;
+    margin:12px 0;
+}
+
+.form .signup .profile .field-job .select-wrapper::before{
+    content:'\2304';
+    position:absolute;
+    right: 10px;
+    top:-8px;
+    font-size:1.6rem;
+    font-weight:500;
+    display: block;
+}
+
+
+.form .signup .submit-button{
+    margin:15px 0;
+    width:130px;
+}
+
+.form .signup .submit-button button{
+    outline:0;
+    padding:10px 8px 12px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(13, 129, 13, 0.696);
+    color:#fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+}
+
+/*Signin*/
+
+
+
+
+@media only screen and (min-width:501px){
+    .form .signin{
+        width:450px;
+        margin:0 auto;
+    }
+}
+
+.form .signin .illustration {
+    width:100%
+}
+
+.form .signin .illustration img{
+    max-width:100%
+}
+
+.form .signin.active{
+    display:block;
+}
+
+.form .signin .form-signin .signin-description{
+    text-align: center;
+    margin-bottom:40px;
+}
+
+.form .signin .form-signin .field{
+    margin-bottom:15px;
+}
+
+.form .signin .form-signin .reinit-password{
+   text-align: right;
+   position:relative;
+   padding-bottom:20px;
+   margin-bottom:20px;
+}
+
+.form .signin .form-signin .reinit-password::before{
+    position:absolute;
+    content:'';
+    display: block;
+    width:100%;
+    height:1.5px;
+    background-color: rgb(35, 139, 35);
+    bottom:0;
+ }
+
+.form .signin .form-signin .reinit-password a{
+    font-weight: 800;
+    color: rgb(5, 144, 5);
+ }
+
+ .form .signin .form-signin .footer > div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items:center;
+    margin-bottom:22px;
+ }
+
+ .form .signin .form-signin .footer > div + p{
+    text-align: center;
+ }
+
+
+ .form .signin .form-signin .footer > div + p a{
+    color: rgb(8, 111, 8);
+    font-weight:900;
+    display: inline-block;
+    margin-left:10px
+ }
+
+ .form .signin .form-signin .footer > div button[type='submit']{
+    padding:9px 12px;
+    border:none;
+    background-color: rgb(25, 78, 25);
+    color:#fff;
+    border-radius:8px;
+    cursor:pointer
+ }
+
+ .form .signin .form-signin .footer > div .field.field-remember{
+    margin-bottom:0;
+ }
+
+@media only screen and (min-width:768px){
+    .form .signin.active{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        width:700px;
+        gap:30px;
+    }
+
+    .form .signin .illustration{
+        flex:3;
+        width:100%
+    }
+
+    .form .signin .form-signin{
+        flex:4
+    }
+}
+
+.form .signin{
+    display: none;
+}
